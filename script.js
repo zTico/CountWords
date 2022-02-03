@@ -4,6 +4,7 @@ function contaOcorrencias(t) {
   textarea = textarea.replace(/[^a-zA-Z ]/g, "");
 
   let arealist = document.querySelector("#frasesEcontradas");
+  arealist.innerHTML = "";
 
   if (textarea.length > 0) {
     let array = [];
@@ -49,5 +50,8 @@ function setModalBotao(t) {
   if (textarea.length > 0) {
     t.setAttribute("data-bs-toggle", "modal");
     t.setAttribute("data-bs-target", "#exampleModal");
+  } else {
+    t.setAttribute("data-bs-toggle", "");
+    t.setAttribute("data-bs-target", "");
   }
 }
