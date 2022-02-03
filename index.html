@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Anoreg/CE</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i
+            class="fas fa-biohazard"
+            style="color: #ff3b00; font-size: 20px"
+          ></i>
+          Desafio ANOREG/CE
+        </a>
+      </div>
+    </nav>
+    <div class="container">
+      <br />
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Bem vindo(a)!</h4>
+        <p>
+          Todos os desafios foram feitos com o intuito de entretenimento,
+          focando resolver questões da internet.
+        </p>
+        <hr />
+        <p class="mb-0">
+          Caso deseje acessar mais do repositorio clique aqui
+          <a href="https://github.com/zTico" target="_blank">AQUI</a>.
+        </p>
+        <p class="mb-0">
+          Caso deseje acessar meu Linkedin clique aqui
+          <a
+            href="https://www.linkedin.com/in/thiago-lima-525292193/"
+            target="_blank"
+            >AQUI</a
+          >.
+        </p>
+      </div>
+      <div class="card" style="width: 100%">
+        <div class="card-body">
+          <h5 class="card-title">Conta palavras</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Desafio N:1</h6>
+          <p class="card-text">
+            Crie uma função que receba uma string e retorne um Hash com a
+            quantidade de ocorrências de cada palavra.<br />
+            <b>ATENÇÃO:</b> Não usar a função split, ou outra que automatize o
+            processo de quebra da string em palavras. Exemplo:
+            contaOcorrencias('asa bola casa asa bola asa') teria como saída um
+            hash com a seguinte estrutura:<br />
+            {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'asa': 3,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'bola': 2,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'casa': 1<br />
+            }
+          </p>
+          <p>
+            Projeto baseado nesse desafio acima. 👆 <br/>
+            Não esqueça de abrir o DevTools para verificar o resultado em objeto como solicitado no exercício. 😄
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="mb-3">
+        <label for="texto_entrada" class="form-label">Texto de entrada </label>
+        <textarea
+          class="form-control"
+          id="textarea"
+          placeholder="informe aqui o texto"
+          autofocus
+        ></textarea>
+        <br />
+        <button
+          class="btn btn-success"
+          style="float: right; margin-left: 12px"
+          onclick="limparCaixa()"
+        >
+          Limpar
+        </button>
+        <button
+          class="btn btn-success"
+          style="float: right"
+          onclick="contaOcorrencias(this)"
+          onmouseover="setModalBotao(this)"
+          data-bs-toggle=""
+          data-bs-target=""
+        >
+          Analisar
+        </button>
+        <br />
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p
+              class="modal-title"
+              id="exampleModalLabel"
+              style="font-size: 15px; font-weight: bold; text-align: center"
+            >
+              Palavras e Quantidades Encontradas (Ordem Alfabética)
+            </p>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="frasesEcontradas"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              onclick="document.querySelector('#textarea').focus()"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
+    <script src="script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/71bf9fe135.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </body>
+</html>
